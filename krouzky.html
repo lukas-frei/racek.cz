@@ -1,0 +1,258 @@
+<!Doctype HTML>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Racek</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+  <!-- JQuery CSS -->
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/jq/fullcalendar-2.6.0.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/jq/scheduler-1.2.0.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/jq/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/jq/jquery.datetimepicker.css" />
+  <!-- FlexBook CSS -->
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/flb.css" />
+
+
+  <!-- JQuery for Flexbook Scripts -->
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/jquery.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/jquery-ui.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/jquery.datetimepicker.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/moment.min.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/fullcalendar-2.6.0.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/scheduler-1.2.0.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/lang-all.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/jquery.cookie.js"></script>
+  <!-- FlexBook JavaScripts -->
+  <script type="text/javascript" src="http://www.flexbook.cz/flb.js"></script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700&amp;subset=latin-ext" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#"><img id="logo" src="assets/images/logo-racek.png"></img></a>
+      <div>
+        <ul class="main-nav">
+          <li><a href="index.html">Domů</a></li>
+          <li><a class="current-menu-item" href="krouzky.html">Kroužky</a></li>
+          <li><a href="akce.html">Akce</a></li>
+          <li><a href="klub.html">O klubu</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <hr>
+        <ul class="sec-nav">
+          <li><a href="#">Úvod</a></li>
+          <li><a href="#napln">Nápň</a></li>
+          <li><a href="#rezervace">Rezervace</a></li>
+          <div id="flexbook_profile"></div>
+        </ul>
+        <ul>
+          <li><a id="nav-toggle" href="#">Menu<a></li>
+          <li><a id="nav-close" href="#">X</a><li>
+        </ul>
+      </div>
+      <a class="flexbook"></a>
+    </nav>
+  </header>
+
+  <section id="uvod-strana">
+    <div class="uvod-obsah">
+      <img src="assets/images/krouzky-uvod.jpg">
+      <div class="uvod-text">
+        <h1>Naše kroužky</h1>
+        <p>Sportovní náplň se týká dětí 1. – 5. třídy základní školy. Během těchto let projdou všemi sporty tak, abychom uměli vytipovat vhodný sport pro dané dítě, které ho bude bavit a tím mu pomohli <b>najít cestu ke sportování a zdravému stylu života</b>. Za nejvhodnější tréninkový prostředek v tomto období považujeme pohybové a sportovní hry, gymnastická, atletická a jiná cvičení. Děti vedeme k pohybu převážně formou her a soutěží.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="okrouzku">
+    <div class="okrouzku">
+      <img src="assets/images/racek1.png">
+      <h2 class="krouzky-zdravi">Zdraví dětí</h2>
+      <p>Období mladšího školního věku je označováno jako <b>období zlaté motoriky</b> a je důležité v tomto období na děti působit řízenými pohybovými aktivitami. Je to velmi plodné období pro rozvoj koordinačních schopností. Zanedbání koordinačního rozvoje v tomto období může mít trvalé následky na další aktivní rozvoj jedince.</p>
+      <p>Jedenkrát ročně dochází k <b>lékařskému testování</b> pod záštitou <a href="http://www.sportovnilekarstvi.cz/">Sportovního lékařství</a>, s kterými diskutujeme i obsah našich kroužků tak, aby právě nedocházelo k pozdějším chronickým onemocněním těla. Naopak našim cílem je veškerým disbalancím zabránit.</p>
+      <img src="assets/images/racek2.png">
+      <h2 class="krouzky-servis">Servis pro rodiče</h2>
+      <p>//  O vyzvedávání dětí a kroužku hlídání - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+    </div>
+  </section>
+
+  <div class="cta cta-pastel">
+    <p>Přijďte si vyzkoušet náš kroužek a <span>využijte úvodní hodiny zdarma</span></p>
+    <a href="#nazkousku" class="btn btn-ghost btn-big"><span>Přihlásit</span></a>
+  </div>
+  <div id="nazkousku">
+    <div>
+    <h2>Komplexní sportovní příprava dětí od 1. – 5. třídy</h2>
+    <i>Úvodní hodina zdarma</i>
+    <form id="email-krouzek" action="email.php" method="post" enctype="text/plain">
+      <fieldset>
+        <legend>Vyberte místo</legend>
+        <input type="radio" name="place" value="male" checked>TJ Spoje - Na Balkáně 812/21, Praha 3<br>
+        <input type="radio" name="place" value="female">FTVS UK - José Martího 31, Praha 6
+      </fieldset>
+      <fieldset>
+        <legend>Vyberte čas</legend>
+        <input type="radio" name="time" value="male" checked>Pondělí od 14:30 do 16:30<br>
+        <input type="radio" name="time" value="female">Čtvrtek od 14:30 do 16:30<br>
+        <input type="radio" name="time" value="other">Pátek od 14:30 do 16:30
+      </fieldset>
+      <fieldset>
+        <legend>Vaše údaje</legend>
+        <input type="name" name="name" placeholder="Jméno">
+        <input type="email" name="email" placeholder="Email">
+      </fieldset>
+      <input class="btn cta-pastel" type="submit" value="Přihlásit">
+      <a href="#zpet" title="Zpět" class="zpet">Zpět</a>
+    </form>
+    </div>
+  </div>
+
+  <section id="napln">
+    <h2>Náplň kroužků</h2>
+    <p>Je sestaven pro všeobecný rozvoj sportovních dovedností, návyk správných pohybových stereotypů, zlepšení fyzické zdatnosti, osvojení návyků k pohybovým aktivitám, aktivní teamová kooperace, úplné potlačení hypokineze.</p>
+    <div class="mesice">
+      <div class="mesic">
+        <h3>Září</h3>
+        <p>Tréninky probíhají převážně v přírodě<p>
+        <ul>
+          <li>Seznamovací a pohybové hry</li>
+          <li>Hry s plněním úkolů</li>
+          <li>Překážkové dráhy</li>
+          <li>Základy chůze na slack line</li>
+        </ul>
+      </div>
+      <div class="mesic">
+        <h3>Říjen</h3>
+        <p>Tréninky probíhají převážně v přírodě s možností využití haly<p>
+        <ul>
+          <li>Koordinační a rytmické soutěže</li>
+          <li>Úvod do kolektivních sportů</li>
+          <li>Venkovní míčové hry a soutěže</li>
+          <li>Frisbee</li>
+        </ul>
+      </div>
+      <div class="mesic">
+        <h3>Listopad</h3>
+        <p>Tréninky probíhají v tělocvičnách a halách<p>
+        <ul>
+          <li>Úvod do míčových her</li>
+          <li>Házená</li>
+          <li>Vybíjená</li>
+          <li>Košíková</li>
+        </ul>
+      </div>
+      <div class="mesic">
+        <h3>Prosinec</h3>
+        <p>Tréninky probíhají v tělocvičnách a halách<p>
+        <ul>
+          <li>Úvod do gymnastických cvičení</li>
+          <li>Základní gymnastická cvičení</li>
+        </ul>
+      </div>
+      <div class="mesic">
+        <h3>Leden</h3>
+        <p>Tréninky probíhají v tělocvičnách a halách<p>
+        <ul>
+          <li>Opičí a překážkové dráhy</li>
+          <li>Rytmické a koordinační dráhy</li>
+          <li>Kruhový dovednostní víceboj</li>
+          <li>Stolní tenis</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+<section id="rezervace">
+  <h1>Aktuální kroužky</h1>
+  <div id="flexbook_1"></div>
+  <script>
+  jQuery(document).ready(function( $ ) {
+    flbInit('http://www.flexbook.cz/ajax.php', 21);
+    flbProfile('flexbook_profile', {
+      language: 'cz',
+      buttons: ['login','logout','profile','password','reservation','registration','sendPassword'],
+          checkAttributeMandatory: 1, extraDiv: 1, externalAccount: 0, disablePast: 1, hideAdvertising: 0,
+        extraDiv: 'all',
+    });
+    flbEventList('flexbook_1', {
+      format: { datetime: 'd.m. H:i', time: 'H:i' },
+      tag: ['akce'],
+      renderText: ['name','center','start','end','description','organiser','price','places','attendees','reservation'],
+    });
+  });
+  </script>
+</section>
+
+<section id="kontakt">
+  <div class="kontakt-obsah">
+    <h2>Kontakt</h2>
+    <div class="kontakty">
+        <h3>Lucie Kufová</h3>
+        <span>(marketing, administrativa)</span>
+        <p>605 266 442</p>
+        <p>kufova.lucie@gmail.com</p>
+        <h3>Matouš Jindra</h3>
+        <span>(sportovní náplň)</span>
+        <p>607 727 201</p>
+        <p>matousjindra@gmail.com</p>
+    </div>
+    <div class="follow">
+      <h3>Chcete se včas dozvědět o nových akcí?</h3>
+      <form id="email" action="email.php" method="post" enctype="text/plain">
+        <input type="email" name="email" placeholder="Váš email">
+        <input class="btn cta-pastel" type="submit" value="Přihlásit">
+      </form>
+      <!--
+      <?php mail('youremail@example.com', $_POST['subject'], $_POST['message']); ?>
+      <p>Your email has been sent.</p>-->
+      <h3>Sledujte nás na facebooku:</h3>
+      <iframe class="fcb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsportovniracek%2F&tabs&width=500&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"width="500" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      <iframe class="fcb-mobile" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsportovniracek%2F&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"width="300" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+    </div>
+  </div>
+</section>
+
+<section id="misto">
+  <h2>Kde nás najdete:</h2>
+
+  <div class="mapa">
+    <h3>TJ Spoje Praha<br>Na Balkáně 812/21, Praha 3</h3>
+    <p>kroužeky od 14:30hod - 16:30<br>stále přijímáme nové členy</p>
+    <iframe class="map" width="100%" height="400px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAgy3biWu08Z1c5PoG7-nR0NRwq5PzQMR4
+        &amp;q=Na+Balkáně+812%2F21,+130+00+Praha+3-Vysočany&amp;language=cs" allowfullscreen="">
+    </iframe>
+  </div>
+
+  <div class="mapa">
+    <h3>FTVS UK<br>José Martího 31, Praha 6</h3>
+    <p>kroužek od 14:30hod - 16:30<br>stále přijímáme nové členy</p>
+    <iframe class="map" width="100%" height="400px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAgy3biWu08Z1c5PoG7-nR0NRwq5PzQMR4
+        &amp;q=José+Martího+31,+162+00+Praha+6&amp;language=cs" allowfullscreen="">
+    </iframe>
+  </div>
+
+  <p class="fakturace"><br>Fakturační údaje: <br>Beachklub Ládví z.s.<br>Horáčkova 1213/21, 140 00  Praha 4<br>IČO: 22735135</p>
+</section>
+
+  <footer>
+    <img src="assets/images/logo-racek2.png"><span>2017</span>
+    <h2>Partneři</h2>
+    <img src="assets/images/logo-FTVS2.png">
+    <img src="assets/images/logo-ISL2.png">
+    <img src="assets/images/logo-pikolo2.png">
+  </footer>
+
+  <!-- jquery -->
+  <script type="text/javascript" src="assets/script/jquery-3.1.1.min.js"></script>
+  <!-- custom script -->
+  <script type="text/javascript" src="assets/script/script.js"></script>
+
+</body>

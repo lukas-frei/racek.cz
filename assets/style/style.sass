@@ -1,0 +1,1017 @@
+/* ------------ colors ------------- */
+$primary: #1A2533
+$sec: #88A244
+$sec2: #2B70BF
+$highligh: #EBA92D
+$highligh2: #F9A722
+$highligh3: #F4C068
+$bg1: #ACCDF3
+$bg2: #1B4270
+
+/* ------------ basic setup ------------- */
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+body
+  -webkit-font-smoothing: antialiased
+  text-rendering: optimizelegibility
+
+section
+  margin: 7% auto
+  max-width: 750px
+  padding: 0 25px
+
+/* ------------ font ------------- */
+
+body
+  font-family: 'Open Sans', sans-serif
+  color: $primary
+  font-size: 18px
+
+h1
+  font-size: 48px
+  padding: 0 0 0.3em 0
+  font-weight: 600
+
+h2
+  font-size: 48px
+  padding: 0.3em 0 0.3em 0
+  font-weight: 600
+
+.strana-text h2
+   font-size: 42px
+   padding: 0.5em 0 0.3em 0
+
+h3
+  font-size: 36px
+  padding: 1em 0 0.3em 0
+  font-weight: 400
+
+p
+  line-height: 1.7em
+  padding-bottom: 0.7em
+
+a
+  transition: .3s all ease
+
+section a
+  color: $primary
+  font-weight: 700
+  &:hover
+    color: $highligh
+
+nav a,
+.btn,
+.btn-ghost
+  color: $primary
+  text-decoration: none
+  &:hover
+    color: $highligh
+/* ------------ nav ------------- */
+
+nav
+  top: 0
+  z-index: 9
+  text-align: center
+  font-weight: 600
+  padding: 60px
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3)
+  position: fixed
+  width: 100%
+  background-color: white
+  transition: .5s all ease
+
+nav>div
+    text-align: left
+    display: inline-block
+    vertical-align: bottom
+    padding-top: 30px
+
+.nav-scroll
+  padding: 0
+  margin-top: -95px
+  img
+    margin-bottom: -15px
+    clip-path: inset(130px 30px 30px 0px)
+
+
+#logo
+  width: 320px
+  transition: .3s all ease
+
+#intro-mobile
+  display: none
+  width: 100%
+
+
+nav ul li
+  display: inline-block
+  text-align: left
+
+.main-nav
+  font-size: 24px
+  padding-bottom: 10px
+  a
+    padding: 0 12px
+    margin-bottom: 15px
+
+.sec-nav
+  padding-top: 10px
+  padding-left: 4px
+  a
+    padding: 0 12px
+
+hr
+  border-top: 2px solid $highligh
+
+.current-menu-item
+  position: relative
+  color: $highligh
+  font-weight: 700
+
+.current-menu-item:after
+  content: " "
+  position: absolute
+  display: block
+  background-color: $highligh
+  height: 4px
+  margin-top: 7px
+  width: 100%
+
+#nav-toggle,
+#nav-close
+  display: none
+
+#nav-close
+  position: absolute
+  top: 10px
+  left: 15px
+  font-size: 30px
+  color: $sec2
+  font-weight: bold
+  &:hover
+    color: $highligh
+
+#nav-toggle
+  position: fixed
+  top: 0
+  left: 0
+  padding: 10px 15px
+  background-color: white
+  font-size: 30px
+  color: $sec2
+  font-weight: bold
+  border-radius: 0 0 10px 0
+  &:hover
+    color: $highligh
+
+
+.mobile-nav
+  position: fixed
+  background-color: white
+  width: 100%
+  height: 100vh
+  padding: 40px 0 0 0
+  #logo
+    width: 240px
+  li
+    display: block
+    padding-bottom: 15px
+    text-align: center
+    margin-right: 40px
+    a
+      margin-left: auto
+      margin-right: auto
+      height: 42px
+      line-height: 36px
+  .current-menu-item:after
+    margin-top: 0
+    display: block
+
+/* ------------ btn ------------- */
+
+.btn
+  display: inline-block
+  width: 200px
+  padding: 13px
+  margin: 5px
+  border: 3px solid $highligh2
+  border-radius: 5px
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5)
+  background-color: $highligh2
+  text-align: center
+  text-shadow: none
+  font-weight: 600
+  transition: .3s all ease
+  line-height: normal
+  &:hover
+    color: $primary
+    font-weight: 600
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.9)
+
+.btn-ghost
+  border: 3px solid $primary
+  background-color: transparent
+  box-shadow: none
+  &:hover
+    color: $primary
+    font-weight: 600
+    box-shadow: none
+
+.btn-white
+  border-color: white
+  color: white
+
+.btn span
+  cursor: pointer
+  display: inline-block
+  position: relative
+  transition: 0.5s
+
+.btn span:after
+  content: '\00bb'
+  position: absolute
+  opacity: 0
+  top: -6px
+  right: -25px
+  font-size: 24px
+  color: $primary
+  transition: 0.5s
+
+.btn.btn-white span:after
+  color: white
+
+.btn-big span:after
+  font-size: 30px
+  top: -7px
+  right: -30px
+
+.btn:hover span
+  padding-right: 25px
+
+.btn-big:hover span
+  padding-right: 30px
+
+.btn:hover span:after
+  opacity: 1
+  right: 0
+
+/* ------------ uvod ------------- */
+
+#uvod
+  transition: .5s all ease
+  margin: 357px 0 0 0
+  max-width: none
+  padding: 0
+  height: 700px
+  background-image: url("../images/uvod-bg1.jpg")
+  background-size: cover
+  background-repeat: no-repeat
+  color: white
+  text-align: center
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5)
+  p
+    font-weight: 600
+    max-width: 500px
+    margin: 0 auto
+  h2
+    font-size: 36px
+    padding-bottom: 10px
+
+.prvni
+  display: table
+  height: 420px
+  width: 100%
+  background-color: rgba(27, 66, 112, 0.8)
+  p
+    font-size: 24px
+    max-width: 700px !important
+
+.druhy
+  display: table
+  height: 280px
+  width: 50%
+  float: left
+  background-color: rgba(88, 125, 39, 0.8)
+  box-sizing: content-box
+  padding-right: 2px
+
+.treti
+  display: table
+  height: 280px
+  width: 50%
+  float: right
+  background-color: rgba(166, 118, 28, 0.8)
+  margin-left: -2px
+
+#uvod>div>div
+  text-align: center
+  display: table-cell
+  vertical-align: middle
+
+/* ------------ o nas ------------- */
+#onas
+  max-width: 1200px
+  text-align: center
+  div
+    width: 49%
+    display: inline-block
+    min-width: 450px
+    padding: 30px 0 0 0
+    p
+      max-width: 450px
+      display: block
+      margin: 0 auto
+  ul
+    padding-bottom: 40px
+    list-style: none
+    li
+      padding-bottom: 1em
+  h2
+    padding-top: 0
+  h3
+    font-weight: 300
+  .btn-ghost
+    margin-top: 15px
+
+
+/* ------------ cta ------------- */
+.cta
+  background-color: $highligh3
+  padding: 20px 0
+  text-align: center
+  font-size: 24px
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5)
+
+.cta-pastel
+  background-color: $highligh3
+  border-color: $highligh3
+
+.cta p
+  display: inline-block
+  padding-bottom: 5px
+
+.cta span
+  font-weight: 700
+
+.cta .btn-ghost
+  background-color: $highligh3
+  margin-left: 20px
+  padding: 8px 25px
+
+.cta-pastel .btn-ghost
+  background-color: $highligh3
+
+#nazkousku
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(27, 66, 112, 0.9)
+  z-index: 99
+  opacity: 0
+  transition: 200ms opacity ease-in
+  pointer-events: none
+
+#nazkousku:target
+  opacity: 1
+  pointer-events: auto
+
+#nazkousku > div
+  position: relative
+  max-width: 400px
+  margin: 10% auto
+  background: white
+  padding: 20px
+  border-radius: 5px
+  h2
+    font-size: 24px
+  i
+    font-size: 20px
+  form
+    margin: 20px 0 10px 0
+    fieldset
+      margin: 10px 0
+      padding: 10px
+    legend
+      padding: 0 5px
+      font-weight: 600
+    input[type=radio]
+      margin: 0 5px 5px 0
+    input[type=name],
+    input[type=email]
+      font-size: inherit
+      padding: 5px
+      width: 49%
+    input[type=submit]
+      font-size: inherit
+    .zpet
+      color: $primary
+      font-weight: 600
+      font-size: inherit
+      border: 2px solid $primary
+      border-radius: 5px
+      margin-right: 5px
+      background-color: white
+      padding: 13px
+      cursor: pointer
+      transition: .3s all ease
+      text-decoration: none
+      &:hover
+        box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5)
+        color: $primary
+
+
+/* ------------ akce ------------- */
+#sluzby
+  margin: 0
+  max-width: none
+  padding: 0
+
+.akce
+  width: 100%
+  height: 90vh
+  overflow: hidden
+  position: relative
+  font-weight: 600
+
+.akce img
+  height: 100%
+  position: absolute
+  z-index: -1
+  top: 0
+  left: 0
+
+.akce-popis
+  width: 640px
+  margin-left: 5%
+  color: white
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5)
+  background-color: rgba(27, 66, 112, 0.8)
+  height: 90vh
+  padding: 100px 50px
+  object-fit: cover
+
+.akce-popis h2
+  padding-bottom: 5px
+
+.akce p:last-of-type
+  padding: 15px 0 30px 0
+
+.akce-popis .btn-ghost
+  border-color: white
+  color: white
+
+.akce-popis .btn
+  margin-left: 0
+
+
+/* ------------ novniky ------------- */
+#novinky
+  max-width: 1200px
+
+#novinky h2
+  padding-top: 0
+
+#novinky article
+  width: 45%
+  display: inline-block
+  padding: 20px 0
+  min-width: 320px
+
+#novinky article:nth-child(even)
+  margin-right: 9%
+
+#novinky .date
+  display: inline-block
+  text-align: center
+  background-color: $sec
+  padding: 10px
+  color: white
+  margin-right: 10px
+  border-radius: 5px
+  font-size: 24px
+
+#novinky h3
+  display: inline-block
+  font-size: 28px
+  vertical-align: bottom
+  margin-bottom: -5px
+
+#novinky article p
+  padding: 20px 0 0 0
+
+.btn-article
+  text-decoration: none
+
+.btn-article span:after
+  content: ' \00bb'
+
+
+/* ------------ galerie ------------- */
+#foto
+  width: 100%
+  max-width: none
+  margin: 0
+  padding: 0
+
+#foto img
+  width: 100%
+  margin-bottom: -6px
+
+/* ------------ kontakt ------------- */
+
+#kontakt
+  background-color: $bg1
+  margin: 0 auto
+  max-width: none
+
+.kontakt-obsah
+  max-width: 950px
+  margin: 0 auto
+  padding: 7% 25px
+
+.kontakty
+  max-width: 300px
+  margin-right: 100px
+  display: inline-block
+  h3:first-child
+    padding-top: 20px
+  h3
+    padding-bottom: 0
+  span
+    display: inline-block
+    padding-bottom: 10px
+  p
+    font-size: 24px
+    padding-bottom: 5px
+
+.follow
+  display: inline-block
+  vertical-align: top
+  max-width: 500px
+  h3
+    font-size: 24px
+    padding-top: 20px
+
+#email
+  margin: 0 0 20px 0
+  input
+    font-size: 1em
+    font-family: inherit
+    padding: 5px
+  input:first-child
+    width: 74%
+    border-radius: 5px
+  input:last-child
+    width: 25%
+    margin: 0
+
+.cta #email
+  display: inline-block
+  padding-left: 10px
+  margin: 0
+  input:first-child
+    width: 200px
+  input:last-child
+    width: 150px
+  .btn-ghost
+    border-width: 1px
+
+.btn
+  cursor: pointer
+
+.fcb-mobile
+  display: none
+
+#misto
+  max-width: 1200px
+
+.mapa
+  width: 49%
+  min-width: 500px
+  display: inline-block
+  h3
+    font-size: 24px
+
+.fakturace
+  text-align: center
+  display: inline-block
+  padding-top: 50px
+  width: 100%
+
+
+/* ------------ footer ------------- */
+footer
+  background-color: $bg2
+  text-align: center
+  padding: 7% 25px
+  color: white
+
+footer img
+  height: 100px
+  margin: 10px 50px 50px 0
+
+footer img:first-of-type
+  width: 100%
+  height: auto
+  max-width: 400px
+  margin-bottom: -15px
+  margin-right: -25px
+
+footer span
+  font-size: 60px
+  font-weight: 700
+
+footer h2
+  padding-top: 100px !important
+  margin-left: -40px
+
+
+/* ------------ footer ------------- */
+
+
+/* ------------ Krouzky - úvod ------------- */
+#uvod-strana
+  background-color: $bg1
+  margin: 357px auto 0 auto
+  max-width: none
+  transition: 0.5s all ease
+
+.uvod-obsah
+  max-width: 900px
+  padding: 7% 25px
+  margin: 0 auto
+  img
+    width: 300px
+
+.uvod-obsah-text
+  max-width: 750px
+
+.uvod-text
+  max-width: 500px
+  margin-left: 40px
+  vertical-align: top
+  display: inline-block
+  h1
+    padding-bottom: 20px
+
+
+/* ------------ Krouzky - o krouzku ------------- */
+.krouzky-zdravi
+  color: $sec
+  display: inline-block
+
+.krouzky-servis
+  color: $highligh
+  display: inline-block
+
+.okrouzku img:first-of-type
+  display: inline-block
+  width: 120px
+  margin-right: -20px
+
+.okrouzku img:last-of-type
+  display: inline-block
+  width: 120px
+  margin-top: 40px
+
+/* ------------ Krouzky - naplň ------------- */
+#napln
+  max-width: 900px
+
+.mesic
+  width: 45%
+  display: inline-block
+  vertical-align: top
+  margin: 30px 0
+  h3
+    background-color: $bg1
+    padding: 10px 10px
+    border-radius: 5px
+    margin-bottom: 10px
+  p
+    padding-left: 10px
+  ul
+    padding-left: 10px
+    list-style: none
+  li::before
+    content: '- '
+    line-height: 1.7em
+
+.mesic:nth-child(odd)
+  margin-right: 70px
+
+
+/* ------------ Akce ------------- */
+#onas ul
+  padding-left: 0
+  padding-top: 10px
+  line-height: 1.5em
+
+section ul
+  padding-left: 25px
+  line-height: 2em
+  padding-top: 20px
+
+
+/* ------------ Klub ------------- */
+#cil h2
+  padding-top: 0
+
+#partneri h2
+  margin-top: 60px
+
+#partneri img
+  max-width: 550px
+  margin: 30px 0 20px 0
+
+
+/* ------------ flexbook ------------- */
+
+#flexbook_profile
+  display: inline-block
+  border-left: 1px solid $primary
+
+#flexbook_profile_flb_profile input,
+#flexbook_1 input
+  font-family: inherit
+  font-size: inherit
+  color: inherit
+  font-weight: 500
+  padding-left: 5px
+
+#flexbook_profile_flb_profile_extra
+  border-radius: 5px
+
+#flexbook_profile_flb_profile input[type=button],
+#flexbook_1 input[type=button]
+  border: 2px solid $primary
+  border-radius: 5px
+  margin-right: 5px
+  background-color: white
+  padding: 5px 13px
+  cursor: pointer
+  transition: .3s all ease
+  &:hover
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5)
+
+#flexbook_1 input[type=button]
+  margin-bottom: 5px
+
+div.flb_profile div.label
+  min-width: 315px
+
+.flexbook_profile_flb_profile_username_label,
+.flexbook_profile_flb_profile_password_label,
+.flb_registration_email_value
+  min-width: 80px !important
+
+#flexbook_profile_flb_profile>input[type=button]
+  background-color: transparent
+  border: none
+  font-weight: 600
+  padding: 0 12px
+  margin-bottom: -6px
+  transition: .3s all ease
+  cursor: pointer
+  &:hover
+    color: $highligh
+    box-shadow: none
+
+
+#rezervace
+  max-width: 900px
+
+.flb_event_list_item
+  margin: 10px 0
+  transition: .3s all ease
+  &:hover
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5)
+
+.flb_event_list_item_desc,
+.flb_event_list_item_button
+  display: inline-block
+  padding: 20px 40px
+
+.flb_event_list_item_desc
+  width: 80%
+  background-color: $sec
+  color: white
+  font-weight: 600
+  border-radius: 5px 0 0 5px
+
+.flb_event_list_item_button
+  width: 20%
+  background-color: $highligh3
+  font-weight: 700
+  border-radius: 0 5px 5px 0
+  text-align: center
+  cursor: pointer
+
+/* ------------ QUERY ------------- */
+
+@media only screen and (max-width: 1000px)
+  .kontakt-obsah
+    max-width: 500px
+    padding-left: 20px
+  #misto
+    max-width: 500px
+    padding-left: 20px
+/* ------------ mobile ------------- */
+
+@media only screen and (max-width: 760px)
+  /* ------------ nav ------------- */
+  nav
+    padding: 60px 0 0 0
+    position: static
+  nav>div
+    padding: 0
+  nav>a
+    width: 100%
+    display: inline-block
+  .main-nav,
+  .sec-nav,
+  nav hr
+    display: none
+  .main-nav
+    padding-top: 30px
+  #nav-toggle
+    display: block
+  .current-menu-item:after
+    width: 117px
+
+
+  /* ------------ font ------------- */
+  section
+   margin: 0
+   padding: 60px 20px
+  h1, h2
+    font-size: 40px
+
+  /* ------------ uvod ------------- */
+  #intro-mobile
+    display: block
+
+  #uvod
+    margin-top: 0 !important
+    height: auto
+    background-image: none
+  .prvni
+    padding: 60px 20px
+    background-color: rgba(27, 66, 112, 0.9)
+    p
+      font-size: 20px
+  .druhy,
+  .treti
+    float: none
+    width: 100%
+    height: auto
+    padding: 60px 20px
+  .druhy
+    padding-right: 0
+    background-color: rgba(88, 125, 39, 0.9)
+    box-sizing: border-box
+    p, h2
+      margin-left: -20px
+      display: block
+  .treti
+    margin-left: 0
+    background-color: rgba(166, 118, 28, 0.9)
+  .mobile
+    display: none
+
+  /* ------------ onas ------------- */
+  #onas
+    ul li
+      padding-bottom: 2em
+    div
+      min-width: auto
+      width: 100%
+      img
+        width: 100%
+        max-width: 350px
+
+  /* ------------ sluzby ------------- */
+  .cta
+    padding: 40px 20px
+    font-size: 20px
+  .cta .btn span::after
+    font-size: 24px
+    margin-top: 1px
+  .akce
+    height: auto
+    img
+      position: static
+      height: auto
+      width: 100%
+      margin-bottom: -6px
+  .akce-popis
+    height: auto
+    width: 100%
+    margin-left: 0
+    padding: 40px 20px
+    background-color: rgba(27, 66, 112, 0.9)
+  .akce-popis .btn,
+  .akce-popis .btn-ghost
+    padding: 10px 15px
+
+  /* ------------ novinky ------------- */
+  #novinky article
+    width: 100%
+    max-width: 550px
+  #novinky article:nth-child(even)
+    margin-right: 0
+
+  /* ------------ kontakt ------------- */
+  .kontakt-obsah
+    padding: 0
+    max-width: 300px
+  .kontakty
+    margin-right: 0
+  .follow
+    width: 100%
+    padding-top: 30px
+  #email input:first-child
+    width: 100%
+  #email input:last-child
+    width: 100%
+  .follow img
+    width: 320px
+
+  .fcb
+    display: none
+  .fcb-mobile
+    display: block
+
+  #misto
+    max-width: 500px
+    margin: 0 auto
+  .mapa
+    width: 100%
+    min-width: auto
+
+  footer
+    padding: 60px 20px
+    h2
+      margin: 0
+    img
+      margin: 20px 0
+
+  /* ------------ krouzky ------------- */
+  #uvod-strana
+    padding: 0
+    margin-top: 0 !important
+  .uvod-obsah
+    padding: 0
+    img
+      width: 100%
+  .uvod-text
+    margin: 0
+    padding: 40px 20px
+    max-width: none
+  .mesic
+    width: 100%
+    margin: 30px 0
+  .mesic:nth-child(odd)
+    margin-right: 0
+
+  .uvod-obsah-text
+    padding: 60px 20px
+  .cta #email input:last-child
+    width: 200px
+    margin-left: 0
+
+  #partneri img
+    width: 100%
+
+
+section:before
+  content:  " "
+  display:  block
+  height:   140px
+  margin:   -140px 0 0 0
+
+#sluzby:before,
+#foto:before
+  content:  " "
+  display:  block
+  height:   120px
+  margin:   -120px 0 0 0
+
+#uvod:before
+  content:  " "
+  display:  block
+  height:   0
+  margin:   0
+
+#kontakt:before
+  content:  " "
+  display:  block
+  height:   120px
+  margin:   -120px -30px 0 -30px
+  background-color: white

@@ -1,0 +1,170 @@
+<!Doctype HTML>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Racek</title>
+
+  <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,600i,700&amp;subset=latin-ext" rel="stylesheet">
+
+  <!-- JQuery CSS -->
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/jq/fullcalendar-2.6.0.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/jq/scheduler-1.2.0.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/jq/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/jq/jquery.datetimepicker.css" />
+  <!-- FlexBook CSS -->
+  <link rel="stylesheet" type="text/css" href="http://www.flexbook.cz/flb.css" />
+
+
+  <!-- JQuery for Flexbook Scripts -->
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/jquery.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/jquery-ui.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/jquery.datetimepicker.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/moment.min.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/fullcalendar-2.6.0.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/scheduler-1.2.0.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/lang-all.js"></script>
+  <script type="text/javascript" src="http://www.flexbook.cz/jq/jquery.cookie.js"></script>
+  <!-- FlexBook JavaScripts -->
+  <script type="text/javascript" src="http://www.flexbook.cz/flb.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#"><img id="logo" src="assets/images/logo-racek.png"></img></a>
+      <div>
+        <ul class="main-nav">
+          <li><a href="index.html">Domů</a></li>
+          <li><a href="krouzky.html">Kroužky</a></li>
+          <li><a class="current-menu-item" href="akce.html">Akce</a></li>
+          <li><a href="klub.html">O klubu</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+        <hr>
+        <ul class="sec-nav">
+          <li><a href="#">Úvod</a></li>
+          <li><a href="#rezervace">Rezervace</a></li>
+          <div id="flexbook_profile"></div>
+        </ul>
+        <ul>
+          <li><a id="nav-toggle" href="#">Menu<a></li>
+          <li><a id="nav-close" href="#">X</a><li>
+        </ul>
+      </div>
+      <a class="flexbook"></a>
+    </nav>
+  </header>
+
+  <section id="uvod-strana">
+    <div class="uvod-obsah uvod-obsah-text">
+      <h2>Připravuje pro vás</h2>
+      <p>// O akcích obecně  - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+      <ul>
+        <li>Kroužek sportovní přípravy dětí</li>
+        <li>Sportovní příměstské tábory</li>
+        <li>Sportovní víkedny pro rodiče s dětmi</li>
+        <li>Sportovní zájezdy do Čech i zahraničí</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="cta cta-pastel">
+    <p>Chcete se včas dozvědět o nových akcí?</p>
+    <form id="email" action="email.php" method="post" enctype="text/plain">
+      <input type="email" name="email" placeholder="Váš email">
+      <input class="btn btn-ghost" type="submit" value="Přihlásit">
+    </form>
+  </div>
+
+  <section id="rezervace">
+    <h2>Aktuální akce</h2>
+    <div id="flexbook_1"></div>
+    <script>
+    jQuery(document).ready(function( $ ) {
+      flbInit('http://www.flexbook.cz/ajax.php', 21);
+      flbProfile('flexbook_profile', {
+        language: 'cz',
+        buttons: ['login','logout','profile','password','reservation','registration','sendPassword'],
+            checkAttributeMandatory: 1, extraDiv: 1, externalAccount: 0, disablePast: 1, hideAdvertising: 0,
+          extraDiv: 'all',
+      });
+      flbEventList('flexbook_1', {
+        format: { datetime: 'd.m. H:i', time: 'H:i' },
+        tag: ['akce'],
+        renderText: ['name','center','start','end','description','organiser','price','places','attendees','reservation'],
+      });
+    });
+    </script>
+  </section>
+
+  <section id="kontakt">
+    <div class="kontakt-obsah">
+      <h2>Kontakt</h2>
+      <div class="kontakty">
+          <h3>Lucie Kufová</h3>
+          <span>(marketing, administrativa)</span>
+          <p>605 266 442</p>
+          <p>kufova.lucie@gmail.com</p>
+          <h3>Matouš Jindra</h3>
+          <span>(sportovní náplň)</span>
+          <p>607 727 201</p>
+          <p>matousjindra@gmail.com</p>
+      </div>
+      <div class="follow">
+        <h3>Chcete se včas dozvědět o nových akcí?</h3>
+        <form id="email" action="email.php" method="post" enctype="text/plain">
+          <input type="email" name="email" placeholder="Váš email">
+          <input class="btn cta-pastel" type="submit" value="Přihlásit">
+        </form>
+        <!--
+        <?php mail('youremail@example.com', $_POST['subject'], $_POST['message']); ?>
+        <p>Your email has been sent.</p>-->
+        <h3>Sledujte nás na facebooku:</h3>
+        <iframe class="fcb" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsportovniracek%2F&tabs&width=500&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"width="500" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+        <iframe class="fcb-mobile" src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fsportovniracek%2F&tabs&width=300&height=214&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"width="300" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="misto">
+    <h2>Kde nás najdete:</h2>
+
+    <div class="mapa">
+      <h3>TJ Spoje Praha<br>Na Balkáně 812/21, Praha 3</h3>
+      <p>kroužeky od 14:30hod - 16:30<br>stále přijímáme nové členy</p>
+      <iframe class="map" width="100%" height="400px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAgy3biWu08Z1c5PoG7-nR0NRwq5PzQMR4
+          &amp;q=Na+Balkáně+812%2F21,+130+00+Praha+3-Vysočany&amp;language=cs" allowfullscreen="">
+      </iframe>
+    </div>
+
+    <div class="mapa">
+      <h3>FTVS UK<br>José Martího 31, Praha 6</h3>
+      <p>kroužek od 14:30hod - 16:30<br>stále přijímáme nové členy</p>
+      <iframe class="map" width="100%" height="400px" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyAgy3biWu08Z1c5PoG7-nR0NRwq5PzQMR4
+          &amp;q=José+Martího+31,+162+00+Praha+6&amp;language=cs" allowfullscreen="">
+      </iframe>
+    </div>
+
+    <p class="fakturace"><br>Fakturační údaje: <br>Beachklub Ládví z.s.<br>Horáčkova 1213/21, 140 00  Praha 4<br>IČO: 22735135</p>
+  </section>
+
+  <footer>
+    <img src="assets/images/logo-racek2.png"><span>2017</span>
+    <h2>Partneři</h2>
+    <img src="assets/images/logo-FTVS2.png">
+    <img src="assets/images/logo-ISL2.png">
+    <img src="assets/images/logo-pikolo2.png">
+  </footer>
+
+  <!-- jquery -->
+  <script type="text/javascript" src="assets/script/jquery-3.1.1.min.js"></script>
+  <!-- custom script -->
+  <script type="text/javascript" src="assets/script/script.js"></script>
+
+</body>
